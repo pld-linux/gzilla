@@ -41,24 +41,26 @@ graficznych i tekstowych w sprawny i oryginalny sposób.
 %setup -q
 
 %build
-./configure --prefix=%{_prefix}
+%configure
 %{__make}
 
 %install
-
 rm -rf $RPM_BUILD_ROOT
+%{__install} -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
-%{__install} -d $RPM_BUILD_ROOT%{_bindir}
-%{__install} -d $RPM_BUILD_ROOT%{_applnk}/Network/WWW
-%{__install} src/gzilla $RPM_BUILD_ROOT%{_bindir}/gzilla
-%{__install} %{SOURCE1} $RPM_BUILD_ROOT%{_applnk}/Network/WWW/gzilla.desktop
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
+#%{__install} -d $RPM_BUILD_ROOT%{_bindir}
+#%{__install} src/gzilla $RPM_BUILD_ROOT%{_bindir}/gzilla
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+
+gzip -9nf AUTHORS ChangeLog NEWS README TODO
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog NEWS README TODO
-%doc doc/*
+%doc doc/* *.gz
 %attr(755,root,root) %{_bindir}/gzilla
-%{_applnk}/Network/WWW/gzilla.desktop
+%{_applnkdir}/Network/WWW/gzilla.desktop
