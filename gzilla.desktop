@@ -6,4 +6,5 @@ Comment[pl]=Gzilla - lynx z obrazkami
 Exec=gzilla
 Terminal=false
 Type=Application
+Categories=Network;WebBrowser;
 # vi: encoding=utf-8
