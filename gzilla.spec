@@ -44,7 +44,7 @@ sposób.
 %patch0 -p1
 
 %build
-%configure \
+%configure2_13 \
 	--disable-gtktest \
 	--disable-glibtest
 %{__make}
