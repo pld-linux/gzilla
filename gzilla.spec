@@ -14,8 +14,8 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gtk+ >= 1.2.0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
 %description
