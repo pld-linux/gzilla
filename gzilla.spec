@@ -31,10 +31,10 @@ powerful way.
 Gzilla jest przegl±dark± WWW napisan± w jêzyku C i wykorzystuj±c±
 bibliotekê GTK+. Jest wci±¿ w fazie rozwojowej, na razie przypomina
 "obrazkowego Lynxa". Celem projektu jest stworzenie szybkiej, ma³ej i
-³atwo rozszerzalnej przegl±darki zgodnej co najmniej z HTML 4.0 i CSS
-1. Innym celem jest stworzenie interfejsu u¿ytkownika umo¿liwiaj±cego
-integracjê pow³ok graficznych i tekstowych w sprawny i oryginalny
-sposób.
+³atwo rozszerzalnej przegl±darki zgodnej co najmniej z HTML-em 4.0 i
+CSS 1. Innym celem jest stworzenie interfejsu u¿ytkownika
+umo¿liwiaj±cego integracjê pow³ok graficznych i tekstowych w sprawny i
+oryginalny sposób.
 
 %prep
 %setup -q
