@@ -56,13 +56,11 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
-gzip -9nf AUTHORS ChangeLog NEWS README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/* *.gz
+%doc doc/* AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/gzilla
 %{_applnkdir}/Network/WWW/gzilla.desktop
