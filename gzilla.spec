@@ -9,10 +9,11 @@ Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-URL:		http://www.gzilla.com/
+Patch0:		%{name}-qelem.patch
+URL:		http://www.gzilla.com
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
-BuildRequires:	glib-devel
+BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gtk+ >= 1.2.0
@@ -39,9 +40,10 @@ graficznych i tekstowych w sprawny i oryginalny sposób.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure
+%configure --disable-gtktest --disable-glibtest
 %{__make}
 
 %install
