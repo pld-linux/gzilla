@@ -1,14 +1,14 @@
 Summary:	Gzilla is a web browser written in the Gtk+ framework.
 Summary(pl):	Gzilla to przegl±darka WWW napisana w GTK+
 Name:		gzilla
-Version:	0.2.1
+Version:	0.3.10
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	http://www.gzilla.com/%{name}-%{version}.tar.gz
-Source1:	gzilla.desktop
+Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 URL:		http://www.gzilla.com/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
