@@ -31,19 +31,22 @@ integration of the graphical and textual shells in a unique and
 powerful way.
 
 %description -l pl
-Gzilla jest przegl±dark± WWW napisan± w jêzyku C i wykorzystuj±c± bibliotekê 
-GTK+. Jest wci±¿ w fazie rozwojowej, na razie przypomina "obrazkowego Lynxa".
-Celem projektu jest stworzenie szybkiej, ma³ej i ³atwo rozszerzalnej 
-przegl±darki zgodnej co najmniej z HTML 4.0 i CSS 1. Innym celem jest 
-stworzenie interfejsu u¿ytkownika umo¿liwiaj±cego integracjê pow³ok 
-graficznych i tekstowych w sprawny i oryginalny sposób.
+Gzilla jest przegl±dark± WWW napisan± w jêzyku C i wykorzystuj±c±
+bibliotekê GTK+. Jest wci±¿ w fazie rozwojowej, na razie przypomina
+"obrazkowego Lynxa". Celem projektu jest stworzenie szybkiej, ma³ej i
+³atwo rozszerzalnej przegl±darki zgodnej co najmniej z HTML 4.0 i CSS
+1. Innym celem jest stworzenie interfejsu u¿ytkownika umo¿liwiaj±cego
+integracjê pow³ok graficznych i tekstowych w sprawny i oryginalny
+sposób.
 
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-%configure --disable-gtktest --disable-glibtest
+%configure \
+	--disable-gtktest \
+	--disable-glibtest
 %{__make}
 
 %install
@@ -53,11 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-#%{__install} -d $RPM_BUILD_ROOT%{_bindir}
-#%{__install} src/gzilla $RPM_BUILD_ROOT%{_bindir}/gzilla
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
