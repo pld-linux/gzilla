@@ -3,6 +3,6 @@ Name=Gzilla
 Comment=Gzilla - lynx with pictures
 Comment[pl]=Gzilla - lynx z obrazkami
 Exec=gzilla
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
