@@ -5,8 +5,6 @@ Version:	0.3.10
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-qelem.patch
