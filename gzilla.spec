@@ -16,8 +16,6 @@ BuildRequires:	XFree86-devel
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gtk+ >= 1.2.0
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Gzilla is a Web browser, written in C using the GTK+ widget set.
