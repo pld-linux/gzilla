@@ -49,7 +49,7 @@ sposób.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
