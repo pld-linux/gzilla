@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
+# Source0-md5:	896e0e7a7e938685d0a65adc46587ff1
 Source1:	%{name}.desktop
 Patch0:		%{name}-qelem.patch
 URL:		http://www.gzilla.com/
