@@ -8,7 +8,7 @@ Group:		X11/Applications/Networking
 Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-qelem.patch
-URL:		http://www.gzilla.com
+URL:		http://www.gzilla.com/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	glib-devel >= 1.2.0
