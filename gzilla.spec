@@ -10,13 +10,12 @@ Source0:	http://www.gzilla.com/Downloads/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-qelem.patch
 URL:		http://www.gzilla.com/
+BuildRequires:  XFree86-devel
+BuildRequires:  glib-devel >= 1.2.0
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
-BuildRequires:	glib-devel >= 1.2.0
-BuildRequires:	XFree86-devel
 Requires:	gtk+ >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Gzilla is a Web browser, written in C using the GTK+ widget set.
@@ -48,12 +47,12 @@ oryginalny sposób.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -62,4 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/* AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/gzilla
-%{_applnkdir}/Network/WWW/gzilla.desktop
+%attr(755,root,root) %{_bindir}/gztest
+%{_desktopdir}/gzilla.desktop
