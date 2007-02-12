@@ -1,5 +1,5 @@
 Summary:	Gzilla is a web browser written in the GTK+ framework
-Summary(pl):	Gzilla to przegl±darka WWW napisana w GTK+
+Summary(pl.UTF-8):   Gzilla to przeglÄ…darka WWW napisana w GTK+
 Name:		gzilla
 Version:	0.3.10
 Release:	2
@@ -26,14 +26,14 @@ Another design goal is to provide a user interface which supports
 integration of the graphical and textual shells in a unique and
 powerful way.
 
-%description -l pl
-Gzilla jest przegl±dark± WWW napisan± w jêzyku C i wykorzystuj±c±
-bibliotekê GTK+. Jest wci±¿ w fazie rozwojowej, na razie przypomina
-"obrazkowego Lynxa". Celem projektu jest stworzenie szybkiej, ma³ej i
-³atwo rozszerzalnej przegl±darki zgodnej co najmniej z HTML-em 4.0 i
-CSS 1. Innym celem jest stworzenie interfejsu u¿ytkownika
-umo¿liwiaj±cego integracjê pow³ok graficznych i tekstowych w sprawny i
-oryginalny sposób.
+%description -l pl.UTF-8
+Gzilla jest przeglÄ…darkÄ… WWW napisanÄ… w jÄ™zyku C i wykorzystujÄ…cÄ…
+bibliotekÄ™ GTK+. Jest wciÄ…Å¼ w fazie rozwojowej, na razie przypomina
+"obrazkowego Lynxa". Celem projektu jest stworzenie szybkiej, maÅ‚ej i
+Å‚atwo rozszerzalnej przeglÄ…darki zgodnej co najmniej z HTML-em 4.0 i
+CSS 1. Innym celem jest stworzenie interfejsu uÅ¼ytkownika
+umoÅ¼liwiajÄ…cego integracjÄ™ powÅ‚ok graficznych i tekstowych w sprawny i
+oryginalny sposÃ³b.
 
 %prep
 %setup -q
