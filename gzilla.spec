@@ -1,5 +1,5 @@
 Summary:	Gzilla is a web browser written in the GTK+ framework
-Summary(pl.UTF-8):   Gzilla to przeglądarka WWW napisana w GTK+
+Summary(pl.UTF-8):	Gzilla to przeglądarka WWW napisana w GTK+
 Name:		gzilla
 Version:	0.3.10
 Release:	2
